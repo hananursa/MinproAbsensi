@@ -17,7 +17,7 @@ import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
 import retrofit2.http.PartMap;
-import retrofit2.http.Query;
+import retrofit2.http.Path;
 
 public interface ApiInterface {
     @POST("loginAdmin")
@@ -29,9 +29,9 @@ public interface ApiInterface {
     @GET("dataGuru")
     Call<List<GuruItem>> getGuru();
 
-    @GET("dataGuru")
+    @GET("dataGuru/{username}")
     Call<List<GuruItem>> getGuruByUsername(
-            @Query("username") String username
+            @Path("username") String username
     );
 
     @GET("dataSiswa")
@@ -40,9 +40,9 @@ public interface ApiInterface {
     @POST("dataSiswa")
     Call<ResponseBody> tambahSiswa(@Body SiswaItem siswa);
 
-    @GET("absenGuru")
+    @GET("absenGuru/{username}")
     Call<List<AbsenItem>> getAbsenByUsername(
-            @Query("username") String username
+            @Path("username") String username
     );
 
     @POST("absenGuru")

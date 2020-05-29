@@ -1,5 +1,8 @@
 package id.ac.polinema.absensiguruprivate;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -11,9 +14,6 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
-
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -156,6 +156,6 @@ public class FormGuruActivity extends AppCompatActivity {
 
     private RequestBody createPartFromString(String description) {
         return RequestBody.create(
-                MultipartBody.FORM, description);
+                okhttp3.MultipartBody.FORM, description);
     }
 }

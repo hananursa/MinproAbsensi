@@ -15,7 +15,6 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 import id.ac.polinema.absensiguruprivate.DetailAbsenActivity;
-import id.ac.polinema.absensiguruprivate.MapsActivity;
 import id.ac.polinema.absensiguruprivate.R;
 
 public class GuruItem extends AbstractItem<GuruItem, GuruItem.ViewHolder> {

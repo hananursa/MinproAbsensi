@@ -1,6 +1,10 @@
 package id.ac.polinema.absensiguruprivate;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+
 import android.content.Intent;
+import android.location.Location;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,8 +12,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.tasks.OnSuccessListener;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -19,10 +24,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import id.ac.polinema.absensiguruprivate.helper.Session;
 import id.ac.polinema.absensiguruprivate.model.User;
 import id.ac.polinema.absensiguruprivate.rest.ApiClient;
 import id.ac.polinema.absensiguruprivate.rest.ApiInterface;
+import id.ac.polinema.absensiguruprivate.helper.Session;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
